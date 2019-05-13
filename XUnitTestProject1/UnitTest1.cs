@@ -42,5 +42,17 @@ namespace XUnitTestProject1
                 Assert.Equal(expected[i], actual[i]);
             }
         }
+
+        [Theory]
+        [InlineData(new[] { 1,2,3 }, new[] { 4, 5 },new[] { 1, 2, 3, 4, 5 } )]
+        public void TestMergeSortedArrays(int[] firstSortedArray,int[]secondSortedArray int[] expected)
+        {
+            int[] actual = new Merger().Merge(firstSortedArray,secondSortedArray);
+
+            for (int i = 0; i < expected.Length; i++)
+            {
+                Assert.Equal(expected[i], actual[i]);
+            }
+        }
     }
 }
