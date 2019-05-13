@@ -45,7 +45,7 @@ namespace XUnitTestProject1
 
         [Theory]
         [InlineData(new[] { 1,2,3 }, new[] { 4, 5 },new[] { 1, 2, 3, 4, 5 } )]
-        public void TestMergeSortedArrays(int[] firstSortedArray,int[]secondSortedArray int[] expected)
+        public void TestMergeSortedArrays(int[] firstSortedArray,int[]secondSortedArray, int[] expected)
         {
             int[] actual = new Merger().Merge(firstSortedArray,secondSortedArray);
 
